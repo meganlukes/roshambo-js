@@ -8,7 +8,47 @@
     <link rel="stylesheet" href="/screen.css" />
   </head>
   <body>
-    <h1 class="hello-world"></h1>
+    <header>
+      <h1>Rock Paper Scissors!</h1>
+      <h2>Who will win?</h2>
+    </header>
+    <main>
+      <ol>
+        <li>
+          <h3>Player 1:</h3>
+        </li>
+        <li>
+          <h3>Player 2:</h3>
+        </li>
+      </ol>
+
+      <ul>
+        <li>
+          <ol class="double">
+            <li><img src="pics/Rock.jpg" alt="Rock" /></li>
+            <li><img src="pics/Paper.jpg" alt="Paper" /></li>
+          </ol>
+        </li>
+        <li>
+          <ol class="single">
+            <li><img src="pics/Scissors.jpg" alt="Scissors" /></li>
+          </ol>
+        </li>
+      </ul>
+    </main>
     <script src="/main.js" charset="utf-8"></script>
   </body>
 </html>
+<!---
+                     Name of who won (center)
+           --------                             --------          
+  Player1: | Image |                   Player2: | Image |
+      ^Flexbox left     (fix small img)      ^Flexbox right  
+
+    
+            Rock   (use % margin,center)   Paper
+                       ------------   
+                      | Scissors |
+                       ------------
+          use % size (40%?) with max pixel size (because some have low res)
+-->
