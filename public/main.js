@@ -36,6 +36,30 @@ function chooseScissors() {
   }
   turn++
 }
+function chooseLizard() {
+  if (turn % 2 === 0) {
+    document
+      .querySelector('.player-1-img')
+      .setAttribute('src', './pics/Lizard.jpg')
+  } else {
+    document
+      .querySelector('.player-2-img')
+      .setAttribute('src', './pics/Lizard.jpg')
+  }
+  turn++
+}
+function chooseSpock() {
+  if (turn % 2 === 0) {
+    document
+      .querySelector('.player-1-img')
+      .setAttribute('src', './pics/Spock.jpg')
+  } else {
+    document
+      .querySelector('.player-2-img')
+      .setAttribute('src', './pics/Spock.jpg')
+  }
+  turn++
+}
 
 function whoWon() {
   const player1Choice = document.querySelector('.player-1-img')
@@ -44,9 +68,14 @@ function whoWon() {
 
   if (player2Choice.includes('placeholder')) {
     return
-  } else if (player1Choice === player2Choice) {
+  } 
+  if (player1Choice === player2Choice) {
     winner.textContent = 'Tie!'
-  } else if (
+  }
+  if (player1Choice)
+  
+  
+  else if (
     player1Choice.includes('rock') &&
     player2Choice.includes('scissors')
   ) {
@@ -61,7 +90,13 @@ function whoWon() {
     player2Choice.includes('paper')
   ) {
     winner.textContent = 'Player 1 Wins!'
-  } else {
+  } else if (
+    player1Choice.includes('lizard') &&
+    player2Choice.includes('')
+  ) {
+    winner.textContent = 'Player 1 Wins!'
+  }
+   else {
     winner.textContent = 'Player 2 Wins!'
   }
 }
@@ -74,6 +109,10 @@ function main() {
   document
     .querySelector('li #scissors')
     .addEventListener('click', chooseScissors)
+
+  document.querySelector('li #lizard').addEventListener('click', chooseLizard)
+
+  document.querySelector('li #spock').addEventListener('click', chooseSpock)
 }
 
 document.addEventListener('DOMContentLoaded', main)
