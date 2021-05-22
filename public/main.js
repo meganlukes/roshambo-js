@@ -68,36 +68,39 @@ function whoWon() {
 
   if (player2Choice.includes('placeholder')) {
     return
-  } 
+  }
   if (player1Choice === player2Choice) {
     winner.textContent = 'Tie!'
-  }
-  if (player1Choice)
-  
-  
-  else if (
-    player1Choice.includes('rock') &&
-    player2Choice.includes('scissors')
-  ) {
-    winner.textContent = 'Player 1 Wins!'
-  } else if (
-    player1Choice.includes('paper') &&
-    player2Choice.includes('rock')
-  ) {
-    winner.textContent = 'Player 1 Wins!'
-  } else if (
-    player1Choice.includes('scissors') &&
-    player2Choice.includes('paper')
-  ) {
-    winner.textContent = 'Player 1 Wins!'
-  } else if (
-    player1Choice.includes('lizard') &&
-    player2Choice.includes('')
-  ) {
-    winner.textContent = 'Player 1 Wins!'
-  }
-   else {
-    winner.textContent = 'Player 2 Wins!'
+  } else if (player1Choice === rock) {
+    if (player2Choice === scissors || player2Choice === lizard) {
+      winner.textContent = 'Player 1 Wins!'
+    } else {
+      winner.textContent = 'Player 2 Wins!'
+    }
+  } else if (player1Choice === paper) {
+    if (player2Choice === rock || player2Choice === Spock) {
+      winner.textContent = 'Player 1 Wins!'
+    } else {
+      winner.textContent = 'Player 2 Wins!'
+    }
+  } else if (player1Choice === scissors) {
+    if (player2Choice === lizard || player2Choice === paper) {
+      winner.textContent = 'Player 1 Wins!'
+    } else {
+      winner.textContent = 'Player 2 Wins!'
+    }
+  } else if (player1Choice === lizard) {
+    if (player2Choice === spock || player2Choice === paper) {
+      winner.textContent = 'Player 1 Wins!'
+    } else {
+      winner.textContent = 'Player 2 Wins!'
+    }
+  } else if (player1Choice === spock) {
+    if (player2Choice === rock || player2Choice === scissors) {
+      winner.textContent = 'Player 1 Wins!'
+    } else {
+      winner.textContent = 'Player 2 Wins!'
+    }
   }
 }
 
