@@ -72,43 +72,42 @@ function whoWon() {
   const player1Choice = document
     .querySelector('.player-1-img')
     .getAttribute('alt')
-  const player2Choice = document.querySelector('.player-2-img')
+  const player2Choice = document
+    .querySelector('.player-2-img')
+    .getAttribute('alt')
   const winner = document.querySelector('h2')
 
-  if (player2Choice.includes('placeholder')) {
+  if (player2Choice.equals('Placeholder')) {
     return
   }
   if (player1Choice === player2Choice) {
     winner.textContent = 'Tie!'
-  } else if (player1Choice.includes('rock')) {
-    if (
-      player2Choice.includes('scissors') ||
-      player2Choice.includes('lizard')
-    ) {
+  } else if (player1Choice.equals('Rock')) {
+    if (player2Choice.equals('Scissors') || player2Choice.equals('Lizard')) {
       winner.textContent = 'Player 1 Wins!'
     } else {
       winner.textContent = 'Player 2 Wins!'
     }
-  } else if (player1Choice === paper) {
-    if (player2Choice === rock || player2Choice === Spock) {
+  } else if (player1Choice.equals('Paper')) {
+    if (player2Choice.equals('Rock') || player2Choice.equals('Spock')) {
       winner.textContent = 'Player 1 Wins!'
     } else {
       winner.textContent = 'Player 2 Wins!'
     }
-  } else if (player1Choice === scissors) {
-    if (player2Choice === lizard || player2Choice === paper) {
+  } else if (player1Choice.equals('Scissors')) {
+    if (player2Choice.equals('Lizard') || player2Choice.equals('Paper')) {
       winner.textContent = 'Player 1 Wins!'
     } else {
       winner.textContent = 'Player 2 Wins!'
     }
-  } else if (player1Choice === lizard) {
-    if (player2Choice === spock || player2Choice === paper) {
+  } else if (player1Choice.equals('Lizard')) {
+    if (player2Choice.equals('Spock') || player2Choice.equals('Paper')) {
       winner.textContent = 'Player 1 Wins!'
     } else {
       winner.textContent = 'Player 2 Wins!'
     }
-  } else if (player1Choice === spock) {
-    if (player2Choice === rock || player2Choice === scissors) {
+  } else if (player1Choice.equals('Spock')) {
+    if (player2Choice.equals('Rock') || player2Choice.equals('Scissors')) {
       winner.textContent = 'Player 1 Wins!'
     } else {
       winner.textContent = 'Player 2 Wins!'
