@@ -1,18 +1,18 @@
 let turn = 0
 
 function whoWon() {
-  const player1Choice = document
-    .querySelector('.player-1-img')
-    .getAttribute('alt')
-  const player2Choice = document
-    .querySelector('.player-2-img')
-    .getAttribute('alt')
-  const winner = document.querySelector('.header h2')
+  const player1Choice = document.querySelector('.player-1-img')
 
+  const player2Choice = document.querySelector('.player-2-img')
+
+  const winner = document.querySelector('.header h2')
+  console.log('Howdy')
   if (player2Choice.equals('Placeholder')) {
+    console.log('Not yet applicable')
     return
   }
-  if (player1Choice === player2Choice) {
+  if (player1Choice.getAttribute('alt') === player2Choice.getAttribute('alt')) {
+    console.log('tie')
     winner.textContent = 'Tie!'
   } else if (player1Choice.equals('Rock')) {
     if (player2Choice.equals('Scissors') || player2Choice.equals('Lizard')) {
