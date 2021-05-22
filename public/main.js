@@ -11,6 +11,7 @@ function chooseRock() {
       .setAttribute('src', './pics/Rock.jpg')
   }
   turn++
+  whoWon()
 }
 function choosePaper() {
   if (turn % 2 === 0) {
@@ -23,6 +24,7 @@ function choosePaper() {
       .setAttribute('src', './pics/Paper.jpg')
   }
   turn++
+  whoWon()
 }
 function chooseScissors() {
   if (turn % 2 === 0) {
@@ -35,6 +37,7 @@ function chooseScissors() {
       .setAttribute('src', './pics/Scissors.jpg')
   }
   turn++
+  whoWon()
 }
 function chooseLizard() {
   if (turn % 2 === 0) {
@@ -49,6 +52,7 @@ function chooseLizard() {
     document.querySelector('.player-2-img').setAttribute('alt', 'lizard')
   }
   turn++
+  whoWon()
 }
 function chooseSpock() {
   if (turn % 2 === 0) {
@@ -61,6 +65,7 @@ function chooseSpock() {
       .setAttribute('src', './pics/Spock.jpg')
   }
   turn++
+  whoWon()
 }
 
 function whoWon() {
