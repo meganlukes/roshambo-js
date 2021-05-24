@@ -125,13 +125,13 @@ function chooseLizard() {
     document
       .querySelector('.player-1-img')
       .setAttribute('src', './pics/Lizard.jpg')
-    document.querySelector('.player-1-img').setAttribute('alt', 'lizard')
+    document.querySelector('.player-1-img').setAttribute('alt', 'Lizard')
     whoWon()
   } else {
     document
       .querySelector('.player-2-img')
       .setAttribute('src', './pics/Lizard.jpg')
-    document.querySelector('.player-2-img').setAttribute('alt', 'lizard')
+    document.querySelector('.player-2-img').setAttribute('alt', 'Lizard')
     whoWon()
   }
   turn++
@@ -141,6 +141,7 @@ function chooseSpock() {
     document
       .querySelector('.player-1-img')
       .setAttribute('src', './pics/Spock.jpg')
+    document.querySelector('.player-1-img').setAttribute('alt', 'Spock')
     whoWon()
   } else {
     document
